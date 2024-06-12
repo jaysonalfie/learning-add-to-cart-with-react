@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [])
 
   //adding items to cart
-  //find method to  cehck for items
+  //find method to  check for items
   //map function is to increase quantity of the item in cart
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id); // check if the item is already in the cart
