@@ -1,3 +1,4 @@
+//Products.jsx-renders the list of products and handling Add to Cart functionality
 import { useEffect, useState, useContext } from "react";
 import { CartContext } from "../context/cart";
 import Cart from "./Cart";
@@ -7,7 +8,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   const { cartItems, addToCart } = useContext(CartContext);
 
-  //function to toggle the modal
+  //function to toggle the visibility of the modal
   const toggle = () => {
     setShowModal(!showModal);
   };

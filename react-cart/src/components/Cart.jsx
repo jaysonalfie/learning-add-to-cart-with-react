@@ -1,9 +1,11 @@
+//Cart.jsx
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import { CartContext } from '../context/cart.jsx'
 
 export default function Cart ({showModal, toggle}) {
 
+  //accessing the CartContext
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } = useContext(CartContext)
 
 

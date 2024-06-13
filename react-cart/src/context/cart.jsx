@@ -1,7 +1,10 @@
+//cart.jsx
 import { createContext, useState, useEffect } from "react";
 
+//creating component that will be used to share data between components
 export const CartContext = createContext();
 
+//provides the data to child components 
 export const CartProvider = ({ children }) => {
    
     //initial state to be items we get from the browser
@@ -73,7 +76,7 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
-  //persisting cart state in browser
+  //persisting cart state in browser-updates local storage whenever the cartItems state changes
   //setItem method sets value of specified localstorage item
   //JSON.stringify converts object into a string
   useEffect(() => {
